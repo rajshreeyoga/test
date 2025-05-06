@@ -24,8 +24,7 @@ Set up a Django REST API that supports:
    * `GET /api/users/` – Return a list of all users.
    * `POST /api/users/` – Create a new user (e.g., with username, email, and password).
 6. Use `django-cors-headers` to allow requests from the Flutter frontend.
-7. Make your API publicly accessible via [ngrok](https://ngrok.com/) or similar tunneling tool.
-8. Test your endpoints using Postman, Insomnia, or `curl`.
+7. Test your endpoints using Postman, Insomnia, VS Code ThunderClient, or any other API testing tool.
 
 ---
 
@@ -47,8 +46,7 @@ Create a Flutter mobile app to interact with the Django API:
    * **User List Screen** – Fetch and display users from the API.
    * **Add User Screen** – Form to input user data and submit a POST request.
 4. Use Dart’s `http` package (or another package of your choice) to make network calls.
-5. Connect to your Django backend using the public `ngrok` URL.
-6. Include:
+5. Include:
 
    * Form validation
    * Error handling
@@ -61,4 +59,3 @@ Create a Flutter mobile app to interact with the Django API:
 * Keep code modular and well-structured.
 * Focus on functionality and clarity.
 * Add minimal comments or documentation if necessary.
-* Provide run instructions for both backend and frontend.
