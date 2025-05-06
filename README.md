@@ -1,6 +1,6 @@
-# 👨‍💻 Technical Interview Task: Django + Flutter – User CRUD
+# 👨‍💻 Technical Interview Task: Django + Flutter – Basic User CRUD (GET & POST)
 
-This task is designed to evaluate your ability to build a full-stack application from scratch. You will set up a Django REST API to manage user data and create a Flutter mobile application that interacts with this backend. The goal is to assess your skills in setting up projects, managing data flow, and implementing CRUD operations across both backend and frontend.
+This task evaluates your ability to build a simple full-stack application using **Django (backend)** and **Flutter (frontend)**. You will implement a minimal REST API and a Flutter app to **retrieve** and **add users**.
 
 ---
 
@@ -8,26 +8,24 @@ This task is designed to evaluate your ability to build a full-stack application
 
 ### 🎯 Objective
 
-Build a REST API using Django that allows basic CRUD operations on user data.
+Set up a Django REST API that supports:
 
-### 📌 Steps
+* ✅ Retrieve all users (`GET /api/users/`)
+* ✅ Add a new user (`POST /api/users/`)
 
-1. **Create a new Django project** named `user_api`.
+### 📌 Instructions
 
-2. **Create a Django app** inside the project called `users`.
+1. **Create a Django project** named `user_api`.
+2. **Create an app** within the project called `users`.
+3. Use Django’s built-in `User` model from `django.contrib.auth.models`.
+4. **Install Django REST Framework** and configure it.
+5. Implement API endpoints using DRF:
 
-3. **Use Django’s built-in User model** (`from django.contrib.auth.models import User`) to manage user records. You may customize it with additional fields if desired.
-
-4. **Install and configure Django REST Framework** to build the API. Expose the following endpoints:
-
-   * `GET /api/users/` – Retrieve a list of all users
-   * `POST /api/users/` – Create a new user
-
-5. **Enable CORS** using `django-cors-headers` to allow requests from the Flutter frontend.
-
-6. **Expose your API publicly** using [ngrok](https://ngrok.com/) or any other tunnel tool so the Flutter app can connect during development.
-
-7. **Test all endpoints** using a tool like Postman or cURL before moving to the frontend.
+   * `GET /api/users/` – Return a list of all users.
+   * `POST /api/users/` – Create a new user (e.g., with username, email, and password).
+6. Use `django-cors-headers` to allow requests from the Flutter frontend.
+7. Make your API publicly accessible via [ngrok](https://ngrok.com/) or similar tunneling tool.
+8. Test your endpoints using Postman, Insomnia, or `curl`.
 
 ---
 
@@ -35,35 +33,32 @@ Build a REST API using Django that allows basic CRUD operations on user data.
 
 ### 🎯 Objective
 
-Build a Flutter application that interacts with your Django backend API to perform user CRUD operations.
+Create a Flutter mobile app to interact with the Django API:
 
-### 📌 Steps
+* ✅ Fetch and display all users.
+* ✅ Add a new user using a form.
 
-1. **Create a new Flutter project** named `user_crud_app`.
+### 📌 Instructions
 
-2. **Choose a state management solution** such as Provider, Riverpod, or Bloc to manage your app's state.
+1. Create a Flutter project named `user_crud_app`.
+2. Choose a state management approach (e.g., **Provider**, **Riverpod**, or **Bloc**).
+3. Build two screens:
 
-3. **Build the following screens:**
+   * **User List Screen** – Fetch and display users from the API.
+   * **Add User Screen** – Form to input user data and submit a POST request.
+4. Use Dart’s `http` package (or another package of your choice) to make network calls.
+5. Connect to your Django backend using the public `ngrok` URL.
+6. Include:
 
-   * A home screen to **list all users** (GET request)
-   * A screen or modal to **add a new user** (POST request)
-
-4. **Connect the Flutter app to your Django API** using the public URL you generated via ngrok.
-
-5. **Ensure proper error handling, loading indicators, and form validations.**
-
-6. **Use Dart's `http` package** (or any other client) to make network calls.
-
----
-
-## 🧪 Tips
-
-* Organize your code with proper file structure.
-* Ensure your code is readable and logically structured.
-* Prioritize functionality and clean architecture over UI polish.
-* Reuse widgets and avoid code duplication.
-* Use Flutter DevTools or console logs for debugging.
+   * Form validation
+   * Error handling
+   * Loading indicators
 
 ---
 
-Feel free to use any additional libraries or packages you are comfortable with, but keep your solution understandable and easy to run for review.
+## ✅ Submission Tips
+
+* Keep code modular and well-structured.
+* Focus on functionality and clarity.
+* Add minimal comments or documentation if necessary.
+* Provide run instructions for both backend and frontend.
