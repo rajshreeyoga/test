@@ -22,9 +22,6 @@ Build a REST API using Django that allows basic CRUD operations on user data.
 
    * `GET /api/users/` – Retrieve a list of all users
    * `POST /api/users/` – Create a new user
-   * `GET /api/users/<id>/` – Retrieve details of a specific user
-   * `PUT /api/users/<id>/` – Update a user
-   * `DELETE /api/users/<id>/` – Delete a user
 
 5. **Enable CORS** using `django-cors-headers` to allow requests from the Flutter frontend.
 
@@ -50,8 +47,6 @@ Build a Flutter application that interacts with your Django backend API to perfo
 
    * A home screen to **list all users** (GET request)
    * A screen or modal to **add a new user** (POST request)
-   * A screen or modal to **edit an existing user** (PUT request)
-   * Include the ability to **delete users** directly from the list (DELETE request)
 
 4. **Connect the Flutter app to your Django API** using the public URL you generated via ngrok.
 
